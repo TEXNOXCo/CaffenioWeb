@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title> Pagina Caffenio </title>
+   <!-- Link para iconos-->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+   <link rel="stylesheet" href="sdasd.css">
+</head>
+<body>
+    <!-- menu y header-->
+    <header> 
+        <nav class="navbar section-content" >
+            <a href="#" class="nav-logo"> 
+              <h2 class="logo-text"> Caffenio </h2>
+            </a>
+            <label for="" class="brand">
+                <a href=""><img src="images\images.png" alt="images"></a>
+            </label>
+            <ul class="nav-menu">
+                <button id="menu-close-button" class="fas fa-times"></button>
+                <li class="nav-item">
+                    <a href="INDEX.html" class="nav-link"> Inicio </a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link"> Sobre </a>
+                </li>
+                <li class="nav-item">
+                    <a href="menu.html" class="nav-link"> Menú </a>
+                </li>
+                <li class="nav-item">
+                    <a href="INDEX.html" class="nav-link"> Reseñas </a>
+                </li>
+                <li class="nav-item">
+                    <a href="INDEX.html" class="nav-link"> Galeria </a>
+                </li>
+                <li class="nav-item">
+                    <a href="INDEX.html" class="nav-link"> Contacto </a>
+                </li>
+                <li class="nav-item" id="menu-login">
+                <a href="indexI.html" class="nav-link"> Iniciar sesión </a>
+                </li>
+                <li class="nav-item" id="menu-user" style="display: none;">
+                <a href="#" onclick="cerrarSesion()" title="Cerrar sesión">
+                <i class="bx bxs-user-circle" style="font-size: 24px;"></i>
+                </a>
+                </li>
+            </ul>
+
+            <button id="menu-open-button" class="fas fa-bars"></button>
+        </nav>
+     </header>
+    <main>
+        <section class="hero-section"> 
+            <div class="section-content">
+              <div class="hero-details">
+                <h2 class="title"> El mejor cafe </h2>
+                <h3 class="subtitle"> Mejora tu dia con nuestro 
+                    cafe especial </h3>
+                    <p class="description"> Somos una cafetería 100% mexicana que busca
+                        mantener despierto eso por lo que sueñas.</p>
+
+                    <div class="buttons">
+                    <a href="menu.html" class="button order-now"> Conoce nuestros productos  </a>
+                    <a href="#contact" class="button contact-us"> Contactanos </a>
+                    
+                    </div>
+                </div>
+                <div class="hero-image-wrapper">
+                    <img src="images/coffee-hero-section.png" alt="Hero" class="hero-image">
+                </div>
+            </div>
+        </section>   
+    <!-- Reseña-->  
+     <section class="testimonials-section" id="testimonials">
+        <h2 class="section-title"> Reseñas</h2>
+        <div class="section-content">
+            <div class="slider-container swiper">
+                <div class="slider-wrapper">
+                    <ul class="testimonials-list swiper-wrapper">
+                        <li class="testimonial swiper-slide">
+                            <img src="images/user-1.jpg" alt="User" class="user-image">
+                            <h3 class="name"> Lázaro Gastelo</h3>
+                            <i class="feedback">"Muy rico el café de aquí.
+
+Lo más padre es el sistema para pedir por el coche, muy didáctico y fácil de usar." </i>
+                        </li>
+                        <li class="testimonial swiper-slide">
+                            <img src="images/user-2.jpg" alt="User" class="user-image">
+                            <h3 class="name"> Diego Ruiz</h3>
+                            <i class="feedback">"Muy bueno y muy recomendado, la mejor calidad que encontraras en Sonora" </i>
+                        </li>
+                        <li class="testimonial swiper-slide">
+                            <img src="images/user-3.jpg" alt="User" class="user-image">
+                            <h3 class="name"> Maria Gonzales</h3>
+                            <i class="feedback">"Todos los dias ocupo mi cafe de Caffenio, muy buena variedad de bebidas y alimentos" </i>
+                        </li>
+                        <li class="testimonial swiper-slide">
+                            <img src="images/user-4.jpg" alt="User" class="user-image">
+                            <h3 class="name"> Marco Diaz</h3>
+                            <i class="feedback">"No hay dia que no compre una lateada, no compro en otro cafe" </i>
+                        </li>
+                        <li class="testimonial swiper-slide">
+                            <img src="images/user-5.jpg" alt="User" class="user-image">
+                            <h3 class="name"> Sofia Garcia</h3>
+                            <i class="feedback">"Muy feliz con la empresa y sus productos" </i>
+                        </li>
+                    </ul>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-slide-button swiper-button-prev"></div>
+                    <div class="swiper-slide-button swiper-button-next"></div>
+                </div>
+            </div>
+        </div>
+     </section>
+
+    <!-- Galeria-->  
+     <section class="gallery-section" id="gallery">
+        <h2 class="section-title"> Galeria </h2>
+        <div class="section-content">
+            <ul class="gallery-list">
+                <li class="gallery-item">
+                   <img src="images/gallery-1.jpg"
+                    alt="Gallery" class="gallery-image">
+                </li> 
+                <li class="gallery-item">
+                   <img src="images/gallery-2.jpg"
+                    alt="Gallery" class="gallery-image">
+                </li> 
+                <li class="gallery-item">
+                   <img src="images/gallery-3.jpg"
+                    alt="Gallery" class="gallery-image">
+                </li> 
+                <li class="gallery-item">
+                   <img src="images/gallery-4.jpg"
+                    alt="Gallery" class="gallery-image">
+                </li> 
+                <li class="gallery-item">
+                   <img src="images/gallery-5.jpg"
+                    alt="Gallery" class="gallery-image">
+                </li> 
+                <li class="gallery-item">
+                   <img src="images/gallery-6.jpg"
+                    alt="Gallery" class="gallery-image">
+                </li> 
+            </ul>
+        </div>
+     </section>
+
+      <!-- Contacto-->  
+       <section class="contact-section" id="contact">
+         <h2 class="section-title"> Contactanos</h2>
+         <div class="section-content">
+            <ul class="contact-info-list">
+                <li class="contact-info">
+                    <i class="fa-solid fa-location-crosshairs"></i>
+                    <p> Entre California y Quintana Roo, Col. Del Valle, Del Valle, 85120  </p>
+                </li>
+                <li class="contact-info">
+                    <i class="fa-solid fa-envelope"></i>
+                    <p> *2233clientes@caffenio.com </p>
+                </li>
+                <li class="contact-info">
+                    <i class="fa-solid fa-phone"></i>
+                    <p> 800 - 2233 - 3646  </p>
+                </li>
+                <li class="contact-info">
+                    <i class="fa-solid fa-clock"></i>
+                    <p> horario de lunes a sabado 6 am a 10 pm </p>
+                </li>
+            </ul>
+
+            <form action="#" class="contact-form">
+                <input type="text" placeholder="Tu nombre" 
+                class="form-input" required>
+                <input type="email" placeholder="Tu email" 
+                class="form-input" required>
+                <textarea placeholder="Tu mensaje"
+                 class="form-input" required></textarea>
+                 <button class="submit-button"> Mandar </button>
+            </form>
+         </div>
+       </section>
+
+       <!-- footer--> 
+        <footer class="footer-section"> 
+          <div class="section-content">
+             <p class="copyright-text"> ©2025 caffenio</p>
+              <div class="social-link-list"> 
+                <a href="https://www.facebook.com/CAFFENIO/?locale=es_LA" class="social-link"> <i class="fa-brands
+                fa-facebook"> </i></a>
+                <a href="https://www.instagram.com/caffenio/?hl=es" class="social-link"> <i class="fa-brands
+                fa-instagram"> </i></a>
+                <a href="https://x.com/caffenio?lang=es" class="social-link"> <i class="fa-brands
+                fa-x-twitter"> </i></a>
+             </div>
+             <p class="policy-test">
+                <a href="https://tienda.caffenio.com/pages/terms-and-conditions?srsltid=AfmBOopNCy4LnI5GrwxoCt9PAIguhgzSpfg0DYfnmAeH43TLy4nsHh9W" class="policy-link"> 
+                    Terminos y Condiciones </a>
+                <span class="separator"> ⚪ </span>
+                <a href="https://tienda.caffenio.com/pages/preguntas-frecuentes?srsltid=AfmBOopdAXaBSl5Thyp8yGkB_9riYYlZlUvUX6RIkvhskvlFwKtecUre" class="policy-link"> 
+                    Preguntas Frecuentes </a>
+             </p>
+          </div>
+        </footer>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="script.js"> </script> 
+
+</body>
+</html>

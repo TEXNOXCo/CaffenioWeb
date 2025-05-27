@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title> Menú Caffenio </title>
+   <!-- Link para iconos-->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+   <link rel="stylesheet" href="sdasd.css">
+   
+</head>
+<body>
+       <!-- menu y header-->
+     <header> 
+        <nav class="navbar section-content" >
+            <a href="#" class="nav-logo"> 
+              <h2 class="logo-text"> Caffenio </h2>
+            </a>
+            <label for="" class="brand">
+                <a href=""><img src="images\images.png" alt="images"></a>
+            </label>
+            <ul class="nav-menu">
+                <button id="menu-close-button" class="fas fa-times"></button>
+                <li class="nav-item">
+                    <a href="INDEX.html" class="nav-link"> Inicio </a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link"> Sobre </a>
+                </li>
+                <li class="nav-item">
+                    <a href="menu.html" class="nav-link"> Menú </a>
+                </li>
+                <li class="nav-item">
+                    <a href="INDEX.html" class="nav-link"> Reseñas </a>
+                </li>
+                <li class="nav-item">
+                    <a href="INDEX.html" class="nav-link"> Galeria </a>
+                </li>
+                <li class="nav-item">
+                    <a href="INDEX.html" class="nav-link"> Contacto </a>
+                </li>
+                <li class="nav-item" id="menu-login">
+                <a href="indexI.html" class="nav-link"> Iniciar sesión </a>
+                </li>
+                <li class="nav-item" id="menu-user" style="display: none;">
+                <a href="#" onclick="cerrarSesion()" title="Cerrar sesión">
+                <i class="bx bxs-user-circle" style="font-size: 24px;"></i>
+                </a>
+                </li>
+                <li class="nav-item">
+                 <div class="carrito">
+                  <details> 
+                  <summary> Productos</summary>
+ <h2>Carrito</h2>
+  <div id="carrito">
+    <ul id="listaCarrito"></ul>
+<p><strong>Total:</strong> $<span id="totalCarrito">0.00</span></p>
+<button id="btnPagar">Pagar</button>
+  </div>
+  </details>
+                </li>
+            </ul>
+ 
+            <button id="menu-open-button" class="fas fa-bars"></button>
+        </nav>
+     </header>
+
+  
+        <!-- menú-->
+     <section class="menu-section" id="menu">
+        <h2 class="section-title"> Nuestro Menú </h2>
+        <div class="section.content">
+          <ul class="menu-list">
+            <li class="menu-item">
+                <img src="images/hot-beverages.png" alt="Hot beverages" 
+                class="menu-image">
+                <h3 class="name"> Bebidas Calientes  </h3>
+                <p class="text"> Disfruta del calor y el sabor en cada sorbo. 
+                    Nuestras bebidas calientes te calientan el cuerpo y el alma. </p>
+
+           <div class="producto" data-nombre="Bebida caliente">
+  <h3>Elige tu bebida</h3>
+  <details>
+    <summary>Especificaciones</summary>
+    <div class="combo-item">
+    <label>Tipo de bebida:</label>
+    <select class="tipoBebida">
+      <option value="capuccino" data-precio="35.00">Capuccino ($35.00)</option>
+      <option value="latte" data-precio="35.00">Latte ($35.00)</option>
+      <option value="americano" data-precio="45.00">Americano ($45.00)</option>
+    </select>
+    <br /><br />
+
+    <label>Tamaño:</label>
+    <select class="tamañoBebida">
+      <option value="pequeño" data-precio="0.00">Pequeño (+$0.00)</option>
+      <option value="mediano" data-precio="15.00">Mediano (+$15.00)</option>
+      <option value="grande" data-precio="25.00">Grande (+$25.00)</option>
+    </select>
+    <br /><br />
+
+    <label>Tipo de café:</label>
+    <select class="tipoCafe">
+      <option value="regular" data-precio="0.00">Regular (+$0.00)</option>
+      <option value="descafeinado" data-precio="5.00">Descafeinado (+$5.00)</option>
+    </select>
+    <br /><br />
+
+    <label>Tipo de leche:</label>
+    <select class="tipoLeche">
+      <option value="entera" data-precio="0.00">Entera (+$0.00)</option>
+      <option value="descremada" data-precio="5.00">Descremada (+$5.00)</option>
+      <option value="almendra" data-precio="8.00">Almendra (+$8.00)</option>
+      <option value="sin" data-precio="0.00">Sin leche (+$0.00)</option>
+    </select>
+    <br /><br />
+
+    <button type="button" onclick="agregarAlCarrito(this)">Agregar al carrito</button>
+    
+  </details>
+</div>
+            </li>
+            <li class="menu-item">
+                <img src="images/cold-beverages.png" alt="Cold beverages" 
+                class="menu-image">
+                <h3 class="name"> Bebidas Frias  </h3>
+                <p class="text"> Selección de bebidas frías, diseñadas para refrescar tu día y despertar tus sentidos.</p>
+ <div class="producto" data-nombre="Bebida Fria">
+  <h3>Elige tu bebida</h3>
+  <details>
+    <summary>Especificaciones</summary>
+    <div class="combo-item">
+    <label>Tipo de bebida:</label>
+    <select class="tipoBebida">
+      <option value="Rockaccino" data-precio="30.00">Rockaccino ($30.00)</option>
+      <option value="Kfreeze" data-precio="45.00">Kfreeze ($45.00)</option>
+    </select>
+    <br /><br />
+
+    <label>Tamaño:</label>
+    <select class="tamañoBebida">
+      <option value="pequeño" data-precio="0.00">Pequeño (+$0.00)</option>
+      <option value="mediano" data-precio="15.00">Mediano (+$15.00)</option>
+      <option value="grande" data-precio="25.00">Grande (+$25.00)</option>
+    </select>
+    <br /><br />
+
+    <label>Tipo de café:</label>
+    <select class="tipoCafe">
+      <option value="regular" data-precio="0.00">Regular (+$0.00)</option>
+      <option value="descafeinado" data-precio="5.00">Descafeinado (+$5.00)</option>
+    </select>
+    <br /><br />
+
+    <label>Tipo de leche:</label>
+    <select class="tipoLeche">
+      <option value="entera" data-precio="0.00">Entera (+$0.00)</option>
+      <option value="descremada" data-precio="5.00">Descremada (+$5.00)</option>
+      <option value="almendra" data-precio="8.00">Almendra (+$8.00)</option>
+      <option value="sin" data-precio="0.00">Sin leche (+$0.00)</option>
+    </select>
+    <br /><br />
+
+    <button type="button" onclick="agregarAlCarrito(this)">Agregar al carrito</button>
+    </div>
+  </details>
+</div>
+            </li>
+
+
+            <li class="menu-item">
+                <img src="images/refreshment.png" alt="Refreshment" 
+                class="menu-image">
+                <h3 class="name"> Reposteria  </h3>
+                <p class="text"> Nuestra selección de deliciosos postres.Un dulce para cada momento especial. </p>
+                <div class="producto" data-nombre="Repostería">
+  <h3>Elige tu postre</h3>
+  <details>
+    <summary>Especificaciones</summary>
+    <div class="combo-item">
+    <label>Tipo de postre:</label>
+    <select class="tipoPostre">
+      <option value="brownie" data-precio="25.00">Brownie ($25.00)</option>
+      <option value="pastel" data-precio="30.00">Pastel ($30.00)</option>
+      <option value="galleta" data-precio="15.00">Galleta ($15.00)</option>
+    </select>
+    <br /><br />
+
+    <label>Tamaño:</label>
+    <select class="tamañoPostre">
+      <option value="mini" data-precio="0.00">Mini (+$0.00)</option>
+      <option value="mediano" data-precio="10.00">Mediano (+$10.00)</option>
+      <option value="grande" data-precio="20.00">Grande (+$20.00)</option>
+    </select>
+    <br /><br />
+
+    <label>¿Agregar cobertura?:</label>
+    <select class="coberturaPostre">
+      <option value="ninguna" data-precio="0.00">Ninguna (+$0.00)</option>
+      <option value="chocolate" data-precio="5.00">Chocolate (+$5.00)</option>
+      <option value="fresa" data-precio="5.00">Fresa (+$5.00)</option>
+      <option value="caramelo" data-precio="5.00">Caramelo (+$5.00)</option>
+    </select>
+    <br /><br />
+
+    <button type="button" onclick="agregarPostre(this)">Agregar al carrito</button>
+    </div>
+  </details>
+</div>
+            </li>
+            <li class="menu-item">
+                <img src="images/special-combo.png" alt="Special Combos" 
+                class="menu-image">
+                <h3 class="name"> Cafe en granos  </h3>
+                <p class="text"> Granos de café 100% Mexicano, tostados a la perfección para un sabor inigualable. 
+                    Experimenta el aroma intenso y el sabor suave y equilibrado.</p>
+    <div class="producto cafe-granos" data-producto="Café en granos">
+  <h3>Elige tu Café en Granos</h3>
+  <details>
+    <summary>Especificaciones</summary>
+    <div class="combo-item">
+    <label for="tipoGrano">Tipo de grano:</label>
+    <select class="tipoGrano">
+      <option value="Baja Sur, tueste italiano" data-precio="80">Baja Sur, tueste italiano ($80.00)</option>
+      <option value="Pluma Hidalgo Oaxaca, Tueste Medio" data-precio="160">Pluma Hidalgo Oaxaca, Tueste Medio ($160.00)</option>
+      <option value="tueste medio, Mezcla Mexicana" data-precio="340">tueste medio, Mezcla Mexicana ($340.00)</option>
+    </select>
+    <br /><br />
+
+    <label for="presentacionGrano">Presentación:</label>
+    <select class="presentacionGrano">
+      <option value="250g">250g (+$0)</option>
+      <option value="500g" data-extra="30">500g (+$30)</option>
+      <option value="1kg" data-extra="60">1kg (+$60)</option>
+    </select>
+    <br /><br />
+
+    <button onclick="agregarCafeGranoAlCarrito(this)">Agregar al carrito</button>
+    </div>
+  </details>
+</div>
+            </li>
+            <li class="menu-item">
+                <img src="images/burger-frenchfries.png" alt="Burguer & french Fries" 
+                class="menu-image">
+                <h3 class="name"> Alimentos </h3>
+                <p class="text"> Selección de Alimentos, variedad de sabores para acompañar tu bebida. </p>
+                <div class="producto alimento" data-producto="Alimento">
+  <h3>Escoge tu Alimento</h3>
+  <details>
+    <summary>Especificaciones</summary>
+    <div class="combo-item">
+
+    <label for="tipoAlimento">Tipo de alimento:</label>
+    <select class="tipoAlimento">
+      <option value="sandwich" data-precio="40">Sándwich ($40.00)</option>
+      <option value="croissant" data-precio="35">Croissant ($35.00)</option>
+      <option value="panini" data-precio="50">Panini ($50.00)</option>
+    </select>
+    <br /><br />
+
+    <label for="acompanamiento">Acompañamiento:</label>
+    <select class="acompanamiento">
+      <option value="ninguno" data-extra="0">Ninguno (+$0)</option>
+      <option value="papas" data-extra="15">Papas (+$15)</option>
+    </select>
+    <br /><br />
+    
+    <button onclick="agregarAlimentoAlCarrito(this)">Agregar al carrito</button>
+    </div>
+  </details>
+</div>
+            </li>
+            <li class="menu-item">
+                <img src="images\desserts.png" alt="desserts" 
+                class="menu-image">
+                <h3 class="name"> Promociones  </h3>
+                <p class="text"> Selección de Combos y promociones para poder disfrutar 
+                  tus articulos favoritos al mejor precio. </p>
+                  <div class="producto combo" data-producto="Combo">
+  <h3>Combos disponibles</h3>
+  <details>
+    <summary>Ver combos</summary>
+
+    <div class="combo-item">
+      <p><strong>Combo 1:</strong> Capuccino + Croissant – $65.00</p>
+      <button onclick="agregarComboPredeterminado('Capuccino', 'Croissant', 65)">Agregar</button>
+    </div>
+
+    <div class="combo-item">
+      <p><strong>Combo 2:</strong> Latte + Brownie – $60.00</p>
+      <button onclick="agregarComboPredeterminado('Latte', 'Brownie', 60)">Agregar</button>
+    </div>
+
+    <div class="combo-item">
+      <p><strong>Combo 3:</strong> Americano + Panini – $80.00</p>
+      <button onclick="agregarComboPredeterminado('Americano', 'Panini', 80)">Agregar</button>
+    </div>
+
+  </details>
+</div>
+            </li>
+          </ul>
+        </div> 
+     <script src="menujs.js"> </script> 
+     </section>
+        <!--footer-->
+      <footer class="footer-section"> 
+          <div class="section-content">
+             <p class="copyright-text"> ©2025 caffenio</p>
+              <div class="social-link-list"> 
+                <a href="https://www.facebook.com/CAFFENIO/?locale=es_LA" class="social-link"> <i class="fa-brands
+                fa-facebook"> </i></a>
+                <a href="https://www.instagram.com/caffenio/?hl=es" class="social-link"> <i class="fa-brands
+                fa-instagram"> </i></a>
+                <a href="https://x.com/caffenio?lang=es" class="social-link"> <i class="fa-brands
+                fa-x-twitter"> </i></a>
+             </div>
+             <p class="policy-test">
+                <a href="https://tienda.caffenio.com/pages/terms-and-conditions?srsltid=AfmBOopNCy4LnI5GrwxoCt9PAIguhgzSpfg0DYfnmAeH43TLy4nsHh9W" class="policy-link"> 
+                    Terminos y Condiciones </a>
+                <span class="separator"> ⚪ </span>
+                <a href="https://tienda.caffenio.com/pages/preguntas-frecuentes?srsltid=AfmBOopdAXaBSl5Thyp8yGkB_9riYYlZlUvUX6RIkvhskvlFwKtecUre" class="policy-link"> 
+                    Preguntas Frecuentes </a>
+             </p>
+          </div>
+        </footer>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="script.js"> </script> 
+    <script src="scriptI.js"> </script> 
+</body>
+</html>
